@@ -1,0 +1,248 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    margin: 0;
+    cursor: url("sushiPointer.png"), auto;
+}
+
+.sushi-emission {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    pointer-events: none;
+    animation: sushi-fly 1.5s ease-out forwards;
+}
+
+@keyframes sushi-fly {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 0;
+    }
+}
+
+/* Typing effect */
+.typing-message {
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: #ff704d;
+    margin-top: 20px;
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid;
+    white-space: nowrap;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ff704d;
+    }
+}
+
+.sushi-container {
+    position: relative;
+}
+
+.sushi {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.sushi:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.sushi::after {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.shadow {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.seaweed {
+    width: 150px;
+    height: 150px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rice {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.salmon {
+    width: 70px;
+    height: 70px;
+    background-color: #ff704d;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.guacamole {
+    width: 40px;
+    height: 40px;
+    background-color: #7ac142;
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.bounce {
+    animation: bounce 0.6s ease;
+}
+
+.bounce:hover {
+    cursor: url("sushiPointer.png"), auto;
+}
+
+@keyframes shadow-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(-50%);
+        width: 150px;
+    }
+
+    50% {
+        transform: translateY(15px) translateX(-50%);
+        width: 60px;
+    }
+}
+
+.bounce~.shadow {
+    animation: shadow-bounce 0.6s ease;
+}
+
+@keyframes shatter {
+    0% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5) rotate(360deg);
+    }
+  }
+  
+  .shatter {
+    animation: shatter 1s ease-out forwards;
+  }
+
+@keyframes fall {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  /* Typing effect styles */
+.typing-message {
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    color: #ff704d;
+    text-align: center;
+    margin-top: 20px;
+    overflow: hidden;
+    border-right: 2px solid;
+    white-space: nowrap;
+    animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ff704d;
+    }
+}
+
+/* Add style for clickable sushi images */
+.clickable-sushi {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Crunch animation when the sushi is clicked */
+@keyframes crunch {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Apply crunch animation to clickable sushi */
+.crunch {
+    animation: crunch 0.5s forwards ease-in-out;
+}
+
+
+  
+  
