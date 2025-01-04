@@ -28,7 +28,6 @@ body {
     }
 }
 
-/* Typing effect */
 .typing-message {
     font-size: 1.5rem;
     font-family: Arial, sans-serif;
@@ -61,7 +60,7 @@ body {
 
 .sushi:hover {
     transform: scale(1.05);
-    cursor: pointer;
+    cursor: url("sushiPointer.png"), auto;
 }
 
 .sushi::after {
@@ -220,6 +219,10 @@ body {
     height: 100px;
     object-fit: cover;
     transition: transform 0.3s ease;
+}
+
+.clickable-sushi:hover {
+    cursor: url("sushiPointer.png"), auto;
 }
 
 /* Crunch animation when the sushi is clicked */

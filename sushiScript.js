@@ -57,7 +57,7 @@ function sushiShatter() {
   typeMessage('Happy 6th Monthsary, my love!', messageElement, 100);
 
   // Sushi images as buttons
-  const sushiImages = ['sushi.png', 'sushi1.png', 'sushi2.png']; // Replace with your sushi image URLs
+  const sushiImages = ['sushi.png', 'sushi1.png', 'sushi2.png', 'sushi3.png']; // Replace with your sushi image URLs
   for (let i = 0; i < sushiImages.length; i++) {
       const sushiImage = document.createElement('img');
       sushiImage.src = sushiImages[i];
